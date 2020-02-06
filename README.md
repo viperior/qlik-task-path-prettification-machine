@@ -8,7 +8,7 @@ Even Qlik Sense task paths deserve to be beautiful. Use this script to create a 
 4. Select the task chains you want to visualize with this tool.
 5. Right-click on the task path cell, and choose the "Export > Export data" menu option.
 6. Save the file as input.xlsx to the /input/ directory.
-7. Run `python3 prettify.py` or `python prettyify.py` in terminal or command prompt after navigating to the project root folder.
+7. Run `python3 prettify.py` or `python prettify.py` in terminal or command prompt after navigating to the project root folder.
 8. Open the output.html file to view your beautifully-displayed reload task chain!
 
 ## Before
