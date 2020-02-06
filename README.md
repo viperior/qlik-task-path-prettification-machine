@@ -15,4 +15,39 @@ Even Qlik Sense task paths deserve to be beautiful. Use this script to create a 
 ![Task chain exported from Qlik Sense Operations Monitor](images/task-chain-input-sample.png)
 
 ## After
+
+### When Viewed In Browser
 ![Nested HTML list output](images/task-chain-output-sample.png)
+
+### HTML Structure
+`<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Qlik Sense Reload Task Chain</title>
+</head>
+<body>
+<style>
+    .qlik-task-chain ul {padding-left: 4px; list-style-type: none;}
+</style>
+<div class="qlik-task-chain">
+<ul>
+    <li>Reload of Extract Script - Sales</li>
+    <li>
+        <ul>
+            <li>Reload of Fact - Sales</li>
+            <li>
+                <ul>
+                    <li>Reload of Data Model - Sales and Marketing</li>
+                    <li>
+                        <ul>
+                            <li>Reload of Dashboard - Sales and Marketing</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+</div>
+</body>
+</html>`
