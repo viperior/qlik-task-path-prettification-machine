@@ -3,8 +3,8 @@ import pandas as pd
 def wrap_content_in_tags(content, left_tag, right_tag):
     return left_tag + content + right_tag
 
-input_file_path = './input/input-sample.xlsx'
-output_file_path = './output/output-sample.html'
+input_file_path = './input/input.xlsx'
+output_file_path = './output/output.html'
 data_frame = pd.read_excel(input_file_path, sheet_name='Sheet1')
 output_html = """<!DOCTYPE html>
     <html lang="en">
@@ -43,7 +43,6 @@ for index, row in data_frame.iterrows():
             task_list_html_output = wrap_content_in_tags(task_list_html_output, '<li>', '</li>')
 
     output_html += task_list_html_output
-
 
 output_html += '</div></body>'
 
