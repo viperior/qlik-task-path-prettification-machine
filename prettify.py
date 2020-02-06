@@ -7,15 +7,15 @@ input_file_path = './input/input.xlsx'
 output_file_path = './output/output.html'
 data_frame = pd.read_excel(input_file_path, sheet_name='Sheet1')
 output_html = """<!DOCTYPE html>
-    <html lang="en">
-    <head>
-    <title>Qlik Sense Reload Task Chain</title>
-    </head>
-    <body>
-    <style>
-        .qlik-task-chain ul {padding-left: 4px; list-style-type: none;}
-    </style>
-    <div class="qlik-task-chain">"""
+<html lang="en">
+<head>
+<title>Qlik Sense Reload Task Chain</title>
+</head>
+<body>
+<style>
+    .qlik-task-chain ul {padding-left: 4px; list-style-type: none;}
+</style>
+<div class="qlik-task-chain">"""
 
 for index, row in data_frame.iterrows():
     current_task_path_text = row['Task Path']
@@ -44,7 +44,7 @@ for index, row in data_frame.iterrows():
 
     output_html += task_list_html_output
 
-output_html += '</div></body>'
+output_html += '</div></body></html>'
 
 with open(output_file_path, 'w') as output_file:
     output_file.write(output_html)
